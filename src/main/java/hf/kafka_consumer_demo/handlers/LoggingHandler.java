@@ -9,9 +9,9 @@ import org.springframework.stereotype.Component;
 @Slf4j
 @Component
 public class LoggingHandler implements KafkaListenerErrorHandler {
-    @Override
-    public Object handleError(Message<?> message, ListenerExecutionFailedException exception) {
-        log.error("Error occurred during processing message", exception);
-        return "logged";
-    }
+  @Override
+  public Object handleError(Message<?> message, ListenerExecutionFailedException exception) {
+    log.error("Error occurred during processing message", exception);
+    return "logged";
+  }
 }

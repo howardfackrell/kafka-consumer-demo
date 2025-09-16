@@ -1,13 +1,12 @@
 package hf.kafka_consumer_demo;
 
+import java.time.Duration;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.kafka.test.context.EmbeddedKafka;
 import org.springframework.test.context.ActiveProfiles;
-
-import java.time.Duration;
 
 @Slf4j
 @EmbeddedKafka(topics = "widgets", partitions = 1, ports = 9092, controlledShutdown = true)

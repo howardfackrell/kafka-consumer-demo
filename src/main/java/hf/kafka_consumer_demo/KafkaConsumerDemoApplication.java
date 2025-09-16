@@ -8,14 +8,9 @@ import org.springframework.boot.autoconfigure.kafka.KafkaProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.kafka.core.DefaultKafkaProducerFactory;
 import org.springframework.kafka.core.KafkaTemplate;
-import org.springframework.kafka.listener.DeadLetterPublishingRecoverer;
 import org.springframework.kafka.listener.DefaultErrorHandler;
-import org.springframework.kafka.listener.KafkaConsumerBackoffManager;
 import org.springframework.kafka.listener.RetryListener;
-import org.springframework.kafka.retrytopic.ListenerContainerFactoryConfigurer;
 import org.springframework.util.backoff.ExponentialBackOff;
-
-import java.util.Map;
 
 @Slf4j
 @SpringBootApplication
@@ -40,7 +35,7 @@ public class KafkaConsumerDemoApplication {
     return new KafkaTemplate<>(factory);
   }
 
-//  @Bean
+  //  @Bean
   public DefaultErrorHandler defaultErrorHandler() {
     var defaultErrorHandler =
         new DefaultErrorHandler(
