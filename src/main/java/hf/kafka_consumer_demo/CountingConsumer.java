@@ -38,7 +38,7 @@ public abstract class CountingConsumer<T> {
     op.accept(messageList);
   }
 
-  public void log() {
+  public void logAllConsumed() {
     withMessages(l -> l.forEach(m -> log.info("Consumed: {}", m)));
   }
 }

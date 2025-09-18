@@ -15,8 +15,8 @@ public class WidgetConsumer extends CountingConsumer<Widget> {
       concurrency = "1")
   public void consume(Widget widget) {
     log.info("Consuming widget: {}", widget);
-    throwSometimes(widget);
-    throwOn7(widget);
+//    throwSometimes(widget);
+//    throwOn7(widget);
     throwOnNegativePrice(widget);
     count(widget);
   }

@@ -26,7 +26,7 @@ class WidgetConsumerTest {
     producer.produce(new Widget(4, "Red Widget", 4.56f));
     producer.produce(new Widget(5, "Blue Widget", 5.67f));
     consumer.waitUntilConsumed(5, Duration.ofSeconds(10));
-    consumer.log();
+    consumer.logAllConsumed();
   }
 
   @Test
@@ -37,7 +37,7 @@ class WidgetConsumerTest {
     producer.produce(new Widget(3, "Round Widget", 3.45f));
 
     consumer.waitUntilConsumed(3, Duration.ofSeconds(10));
-    consumer.log();
+    consumer.logAllConsumed();
   }
 
   @Test
@@ -48,6 +48,6 @@ class WidgetConsumerTest {
     producer.produce(new Widget(3, "Round Widget", 3.45f));
 
     consumer.waitUntilConsumed(3, Duration.ofSeconds(10));
-    consumer.log();
+    consumer.logAllConsumed();
   }
 }
